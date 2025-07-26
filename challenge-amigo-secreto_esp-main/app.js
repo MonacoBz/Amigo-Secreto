@@ -6,9 +6,16 @@ function agregarAmigo(){
     if(amigo.trim() !== ""){
         amigos.push(amigo);
         input.value=""
+        actualizaLista(amigo)
         return;
     }
     alert("cadena vacia, porfavor agrega un nombre")
     return;
 }
 
+function actualizaLista(nombre){
+    let lista = document.getElementById("listaAmigos");
+    let item = document.createElement("li");
+    item.innerText=nombre
+    lista.appendChild(item);
+}
