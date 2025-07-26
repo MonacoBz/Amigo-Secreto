@@ -19,3 +19,15 @@ function actualizaLista(nombre){
     item.innerText=nombre
     lista.appendChild(item);
 }
+
+function sortearAmigo(){
+    if(amigos.length != 0){
+        let listaResultado = document.getElementById("resultado")
+        let numeroAleatorio = Math.floor(Math.random() * amigos.length)
+        listaResultado.innerHTML = `<li>${amigos[numeroAleatorio]}</li>`
+        console.log(numeroAleatorio)
+        return;
+    }
+    alert("Agrega amigos")
+    return;
+}
